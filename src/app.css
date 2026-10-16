@@ -1,0 +1,70 @@
+:root {
+  /* porcelain panel, slate ink, cobalt like blue-and-white ware */
+  --panel: #e8ecea;
+  --paper: #f7f9f8;
+  --well: #dce2df;
+  --ink: #18242b;
+  --muted: #5b6a70;
+  --line: #c6cfcc;
+  --grid: #e3e8e6;
+  --cobalt: #1f45a3;
+  --cobalt-soft: #cdd8f1;
+  --display: 'Bricolage Grotesque', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  --text: 'Instrument Sans', 'Helvetica Neue', 'Segoe UI', system-ui, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #1c1916;
+}
+body {
+  font-family: var(--text);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px;
+  background: transparent;
+  margin: 0;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
+}
+input[type='range']::-moz-range-track {
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--cobalt);
+}
+input[type='range']::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--cobalt);
+}
+input[type='range']:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
